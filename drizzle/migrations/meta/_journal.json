@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1795529878506,
+      "tag": "0000_birthday_rsvps_and_host",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795529950281,
+      "tag": "0001_verified_host_assignment",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795571914340,
+      "tag": "0002_tighten_public_rls_policies",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,2 @@
+CREATE FUNCTION public.assign_verified_host() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER SET search_path=public AS $$ BEGIN IF NEW.email='thurghathaarani0103@gmail.com' AND NEW.email_confirmed_at IS NOT NULL THEN INSERT INTO public.user_roles(user_id,role) VALUES(NEW.id,'host') ON CONFLICT DO NOTHING; END IF; RETURN NEW; END; $$;
+CREATE TRIGGER birthday_verified_host AFTER INSERT OR UPDATE OF email_confirmed_at ON auth.users FOR EACH ROW EXECUTE FUNCTION public.assign_verified_host();
